@@ -1,4 +1,4 @@
-Machine learning models to classify data-set into different types of breast cancer. The software used is Matlab.
+Machine learning models to classify the tumor that it is benign or a malignant tumor. The software used is Matlab.
 Different classifiers are used to classify the the data and the performance of each classifiers can be checked using confusion matrix.
 
 The breast cancer databases was obtained from the University of Wisconsin
