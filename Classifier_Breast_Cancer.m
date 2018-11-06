@@ -3,14 +3,14 @@ target = datas(:,2);                 %set the target as the second column contai
 datas = datas(:, 3:32);              %the attributes are contains in columns 3 to 32
 
 %% classification tree
-X = datas;
-Y = target;
+X = datas;                      %X contains the features
+Y = target;                     %Y contains the target or you can say labels
 tc = fitctree(X,Y);             %fits the input and the target to the classifier
 C0 = predict(tc,X);             %predicts the result after training
 cMat0 = confusionmat(Y,C0);     %confusion matrix
 
 %% NaiveBayes 
-O1 = fitNaiveBayes(datas, target);
+O1 = fitNaiveBayes(datas, target); 
 C1 = O1.predict(datas);
 cMat1 = confusionmat(target,C1);
 
@@ -37,6 +37,3 @@ table(YTest,C3,'VariableNames',{'TrueLabel','PredictedLabel'})
 DAC = fitcdiscr(X,Y);
 dacP = predict(DAC,X);
 cMat0 = confusionmat(Y,dacP);
-
-
-
